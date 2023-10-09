@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Atividade 5: Formatar nome no estilo de catálogo telefônico</h2>
+    <form id="form5">
+        <label for="input5">Digite um nome:</label>
+        <input type="text" id="input5">
+        <input type="submit" value="Formatar Nome">
+    </form>
+    <div id="output5"></div>
+
+    <script>
+        document.getElementById("form5").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const input5 = document.getElementById("input5").value;
+            const output5 = document.getElementById("output5");
+            const parts = input5.split(" ");
+            const lastName = parts.pop();
+            const formattedName = lastName + ", " + parts.join(" ");
+            output5.innerText = formattedName;
+        });
+    </script>
+</body>
+</html>

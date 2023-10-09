@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="pal">Palavra: </label>
+        <input type="text" id="pal">
+        <input type="button" value="vai" onclick="vai()">
+    </form>
+    <script>
+        function vai() {
+            pal = document.querySelector("#pal").value
+            x = 1
+            y = pal.length
+            final = ""
+
+            for(y; y > -1; y--) {
+                if(pal.charAt(y) != "" && pal.charAt(y) != " ") {
+                    final += `${pal.charAt(y)}`
+                }
+            }
+            
+            if(final == pal) {
+                document.write("É um palíndromo")
+            } else {
+                document.write("Não palíndromo")
+            }
+        }
+
+    </script>
+</body>
+</html>
